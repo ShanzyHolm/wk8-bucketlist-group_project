@@ -32,7 +32,7 @@ BucketList.prototype.getData = function(){
 BucketList.prototype.postItem = function(item){
   this.request.post(item)
     .then((items) => {
-      console.log(items);
+      // console.log(items);
       PubSub.publish('BucketList:data-loaded', items);
     })
     .catch(console.error);
