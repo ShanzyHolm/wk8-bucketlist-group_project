@@ -1,5 +1,5 @@
 const PubSub = require('../helpers/pub_sub.js');
-// const
+const ItemView = require('./item_view.js');
 
 const GridView = function(element) {
   this.element = element;
@@ -12,10 +12,9 @@ GridView.prototype.bindEvents = function() {
 };
 
 GridView.prototype.render = function(items) {
+
   // console.log(items);
-  items.detail.forEach((item) => {
-    console.log(item);
-  })
+  items.detail.forEach((item) => );
 };
 
 module.exports = GridView;
