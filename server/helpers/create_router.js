@@ -32,6 +32,20 @@ const createRouter = function (collection) {
       });
   });
 
+  //UPDATE
+  router.put('/:id',(req, res) => {
+    const id = req.params.id;
+    const updatedData = req.body;
+    collection.updateOne(
+      {_id: ObjectID(id)},
+      {$set: updatedData}
+    ).then(() => {
+      collection.find().toArray().then((docs) => {
+        return res.json(docs);
+      });
+    });
+  });
+
 
   //DESTROY
   router.delete('/:id', (req, res) => {
