@@ -7,10 +7,12 @@ const BucketList = function(url){
 };
 
 
-BucketList.prototype.bindEvents() = function(){
+BucketList.prototype.bindEvents = function(){
 
   PubSub.subscribe('FormView:item-submitted', (evt) => {
+    // console.log(evt.target);
     this.postItem(evt.detail);
+
   });
 
   PubSub.subscribe('ItemView:item-delete-clicked', (evt) => {
@@ -30,6 +32,7 @@ BucketList.prototype.getData = function(){
 BucketList.prototype.postItem = function(item){
   this.request.post(item)
     .then((items) => {
+      console.log(items);
       PubSub.publish('BucketList:data-loaded', items);
     })
     .catch(console.error);
