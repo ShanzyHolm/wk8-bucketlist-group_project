@@ -12,9 +12,11 @@ GridView.prototype.bindEvents = function() {
 };
 
 GridView.prototype.render = function(items) {
-
   // console.log(items);
-  items.detail.forEach((item) => );
+  items.detail.forEach((item) => {
+    const itemView = new ItemView(this.element, item);
+    itemView.render();
+  });
 };
 
 module.exports = GridView;

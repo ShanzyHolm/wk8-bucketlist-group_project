@@ -11,6 +11,9 @@ Build a bucket list browser web-app, that allows a user to create a list of thin
 MVP
 Users should be able to view all previously saved bucket list items on the page
 Users should be able to submit an item to save it to the database and see it added to the page
+
+
+
 Extensions
 Users should be able to delete bucket list items
 Users should be able to mark list items as "completed" and save the new status
