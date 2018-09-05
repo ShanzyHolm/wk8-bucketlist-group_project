@@ -17,9 +17,6 @@ BucketList.prototype.bindEvents() = function(){
     this.deleteItem(evt.detail);
   });
 
-  
-
-
 };
 
 BucketList.prototype.getData = function(){
